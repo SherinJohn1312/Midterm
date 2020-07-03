@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a href="/" class="navbar-brand">SCM Restaurants</a>
+  <a href="/" class="navbar-brand">SCM Hotel</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,7 +11,19 @@
         <a href="/" class="nav-link">Home</a>
       </li>
 
-      <% if (authorized) { %>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" id="reservationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reservations
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="reservationsDropdown">
+          <a href="/reservations" class="dropdown-item">Scheduled</a>
+          <div class="dropdown-divider"></div>
+          <a href="/reservations/new" class="dropdown-item">New Reservation</a>
+        </div>
+      </li>
+
+       <% if (authorized) { %> 
         <li class="nav-item dropdown">
           <a href="#" class="nav-link dropdown-toggle" id="reservationsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Reservations
